@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Prova</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-4" id="formulario1">
+            <form>
+        <div class="mb-4"> 
+            <label for="InputName1" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="InputName1" aria-describedby="nameHelp" required>
+        </div>
+        <div class="mb-4"> 
+            <label for="InputName2" class="form-label">Cognoms</label>
+            <input type="text" class="form-control" id="InputName2" aria-describedby="nameHelp" required>
+        </div>
+        <div class="mb-3">
+            <label for="InputDate" class="form-label">Data de naixement</label>
+            <input type="date" class="form-control" id="InputDate" required>
+        </div>
+        <div class="mb-4">
+            <label for="InputEmail1" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" required>
+            <div id="emailHelp" class="form-text">No compartiremos tu correo con nadie más.</div>
+        </div>
+       <select class="form-select form-select-md mb-3" aria-label="Genero" required>
+            <option selected>Genero</option>
+            <option value="1">Home</option>
+            <option value="2">Dona</option>
+            <option value="3">Altre</option>
+        </select>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="Password1" required>
+        </div>
+        <div class="mb-3">
+            <label for="Textarea1" class="form-label">Comentaris</label>
+            <textarea class="form-control" id="Textarea1" rows="3" required></textarea>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+            <label class="form-check-label" for="exampleCheck1">
+                Acceptes els <a href="/html/terminos.html" target="_blank">termes i condicions</a>
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+
+        <a href="/html/index.html" class="btn btn-secondary w-10 mt-2">Tornar a la pàgina principal</a>
+    </div>
