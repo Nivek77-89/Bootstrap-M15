@@ -11,7 +11,7 @@
     <div class="container mt-5">
         <div class="row">
     <div class="col-lg-4 col-md-6 col-sm-12 mb-4" id="formulario1">
-            <form>
+            <form onsubmit="cridaSubmit1(event)">
         <div class="mb-4"> 
             <label for="InputName1" class="form-label">Nom</label>
             <input type="text" class="form-control" id="InputName1" aria-describedby="nameHelp" required>
@@ -21,6 +21,7 @@
             <input type="text" class="form-control" id="InputName2" aria-describedby="nameHelp" required>
         </div>
         <div class="mb-3">
+            
             <label for="InputDate" class="form-label">Data de naixement</label>
             <input type="date" class="form-control" id="InputDate" required>
         </div>
@@ -54,3 +55,38 @@
 
         <a href="/html/index.html" class="btn btn-secondary w-10 mt-2">Tornar a la pàgina principal</a>
     </div>
+    <script>
+        
+function cridaSubmit1(event) {
+            event.preventDefault();
+
+            if (!esMajorEdat()) {
+                alert("Ets menor d'edat. No pots continuar.");
+                return;
+            }
+
+            const nom = document.getElementById("InputName1").value;
+
+            alert(`Hola ${nom}`);
+        }
+
+        function esMajorEdat() {
+            const dataInput = document.getElementById("InputDate").value;
+            if (!dataInput) return false;
+
+            const dataNaixement = new Date(dataInput);
+            const avui = new Date();
+
+            let edat = avui.getFullYear() - dataNaixement.getFullYear();
+            const mes = avui.getMonth() - dataNaixement.getMonth();
+
+            if (mes < 0 || (mes === 0 && avui.getDate() < dataNaixement.getDate())) {
+                edat--;
+            }
+
+            return edat >= 18;
+        }
+        
+    </script>
+</body>
+</html>
