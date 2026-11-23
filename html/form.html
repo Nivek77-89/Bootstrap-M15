@@ -83,13 +83,11 @@
             const formulari = document.getElementById("formulari");
             const correu = formulari.elements["correu"];
 
-            // Comprova que tots els camps required estiguin plens
             if (!formulari.checkValidity()) {
                 formulari.reportValidity();
                 return;
             }
 
-            // Comprova el format del correu abans d'enviar
             if (!correuValid(correu.value.trim())) {
                 correu.classList.add("is-invalid");
                 correu.focus();
